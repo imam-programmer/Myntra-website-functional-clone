@@ -1,49 +1,16 @@
-let bagItems;
-onLoad();
-function onLoad(){
-   let bagItemsStr=localStorage.getItem("bagItems")
-   bagItems=bagItemsStr?JSON.parse(bagItemsStr):[];
-    displayItemsOnHomePage()
-    displayBagIcon()
-}
-onLoad();
-function addToBag(item){
-bagItems.push(item)
-localStorage.setItem("bagItems",JSON.stringify(bagItems))
-displayBagIcon()
-}
-function displayBagIcon(){
-    let bagItemCountElement=document.querySelector(".bag-item-count")
-    if(bagItems.length>0){
-        bagItemCountElement.style.visibility="visible"
-        bagItemCountElement.innerHTML=bagItems.length
+let main=document.querySelector("main");
+console.log(main);
+// main.innerHTML=
 
-    }else{
-        bagItemCountElement.style.visibility="hidden"
-    }
-}
-
-function displayItemsOnHomePage(){
-let itemsContainerElement= document.querySelector(".items-container")
-if(!itemsContainerElement){
-    return;
-}
-let innerHTML=""
-items.forEach((item)=>{
-innerHTML+=`<div class="item-container">
-                <img class="item-image" src=${item.image} alt="img1">
-                <div class="rating">
-                    ${item.rating.stars} ⭐ | ${item.rating.count}
-                </div>
-                <div class="company-name">${item.company}</div>
-                <div class="item-name">${item.item_name}</div>
-                <div class="price">
-                    <span class="current-price">Rs ${item.current_price}</span>
-                    <span class="original-price">Rs ${item.original_price}</span>
-                    <span class="discount">(${item.discount_percentage}% off)</span>
-                </div>
-                <button class="btn-add-bag" onclick="addToBag(${item.id})">Add to Bag</button>
+let innerHTML="";
+items.map((e)=>{
+return innerHTML+= `<div class="product">
+              <img src="./${e.image}" alt="">
+              <h6>${e.rating.stars} <span>★★★★★</span> | (${e.rating.count})</h6>
+              <h3>${e.company}</h3>
+              <h4>${e.item_name}</h4>
+              <h2 >$${e.current_price} <span class="original">$${e.original_price}</span> <span class="offer">(${e.discount_percentage}% OFF)</span></h2>
+              <button>Add to Bag</button>
             </div>`
 })
-itemsContainerElement.innerHTML=innerHTML
-}
+main.innerHTML=innerHTML

@@ -92,14 +92,14 @@ a.action_container:link {
     font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     box-sizing: border-box;
 }
-header {
+/* header {
     display: flex;
     background-color: #ffffff;
     height: 80px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #b6b1b1;
-}
+} */
 .myntra_home {
     height: 45px;
 }
@@ -158,6 +158,7 @@ header {
     height: 40px;
     border: 0;
     border-radius: 0 4px 4px 0;
+    outline: none;
 }
 
 .action_bar {
@@ -235,104 +236,68 @@ header {
 
 /* =============my css start======== */
 
-/* .items-container  .item-container .item-image .rating .company-name .item-name .price .current-price .original-price .discount .btn-add-bag*/ 
-.items-container{
-width: 80%;
-margin:30px 10%;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-gap: 20px;
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ========main part start============== */
+main{
+    margin: 100px 0;
+   display: grid;
+   grid-template-columns: repeat(4,250px);
+   justify-content: center;
+   row-gap: 20px;
 
 }
-.item-container{
-width: 250px;
+.product{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 }
-.item-image{
-width: 100%;
+.product img{
+    width: 100%;
 }
-.rating {
-font-size: 12px;
-font-weight: 700;
+.product h6{
+    font-size: 14px;
 }
-.company-name{
-font-size: 16px;
-font-weight: 700;
-line-height: 1;
-color: #282c3f;
-margin-bottom: 6px;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-margin-top: 15px;
+.product h6 span{
+    color: orange;
 }
-.item-name{
-color: #535766;
-font-size: 14px;
-line-height: 1;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-font-weight: 400;
+.product h3,h4{
+    text-transform: capitalize;
 }
-.price{
-color: #282c3f;
-white-space: nowrap;
-font-size: 14px;
-line-height: 15px;
-margin-top: 8px;
+.product h2{
+    font-size: 20px;
 }
-.current-price{
-color: #282c3f;
-font-size: 14px;
-font-weight: 700;
+.product h2 .original{
+    font-size: 16px;
+    text-decoration: line-through;
+    font-weight: 400;
 }
-.original-price{
-font-size: 12px;
-text-decoration: line-through;
-color: #7e818c;
-margin-left: 5px;
+.product h2 .offer{
+    font-size: 16px;
+    font-weight: 600;
+    color: orange;
 }
-.discount{
-font-size: 12px;
-font-weight: 400;
-color: #ff905a;
-margin-left: 5px;
-}
-.btn-add-bag{
-background-color: lightgreen;
-border: none;
-padding: 5px 15px;
-margin-top: 8px;
-font-size: 18px;
-font-weight: 600;
-width: 100%;
-border-radius: 10px;
-cursor: pointer;
-transition: 0.4s;
-}
-.btn-add-bag:active{
-    transform: scale(0.8);
-}
-.bag-item-count{
-        background-color: #f16565;
-    white-space: nowrap;
-    text-align: center;
-    line-height: 18px;
-    padding: 0 6px;
-    height: 18px;
-    position: relative;
-    border-radius: 50%;
-    font-size: 12px;
-    color: #fff;
-    left: 13px;
-    top: -44px;
-    font-weight: 700;
+.product button{
+    width: 100%;
+    background: rgb(12, 202, 12);
+    padding: 5px 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    transition: 0.4s;
     cursor: pointer;
 }
-.action_container {
-    text-decoration: none;
-}
-a.action_container:link {
-    color:black;
+.product button:active{
+    transform: scale(0.8);
 }
