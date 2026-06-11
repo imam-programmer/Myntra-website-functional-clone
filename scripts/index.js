@@ -6,10 +6,13 @@ function onLoad(){
     bagadd_array=storagestring?JSON.parse(storagestring):[]
     firstpage()
     setstorage()
-
+    
 }
 function firstpage(){
     let innerHTML="";
+    if(!main){
+        return;
+    }
     items.map((e)=>{
     return innerHTML+= `<div class="product">
                   <img src="./${e.image}" alt="">
@@ -29,7 +32,7 @@ function addCard(e){
    
 }
 function setstorage(){
-     let addtopbag=document.querySelector(".bag-item-count");
+    let addtopbag=document.querySelector(".bag-item-count");
  if(bagadd_array.length>0){
      addtopbag.innerHTML=bagadd_array.length
      addtopbag.style.visibility="visible"
@@ -37,4 +40,5 @@ function setstorage(){
         addtopbag.style.visibility="hidden"
     }
 }
+
 
