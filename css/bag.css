@@ -263,7 +263,7 @@ section {
     margin-left: 0;
 }
 section {
-    padding: 0 60px;
+    padding:0px 60px;
 }
 .bag-summary {
     width: 30%;
@@ -286,6 +286,7 @@ section {
 .bag-page {
     display: flex;
     justify-content: space-between;
+    margin: 40px 0;
 }
 .price-footer {
     padding-top: 0px;
