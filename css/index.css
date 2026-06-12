@@ -240,12 +240,13 @@ a.action_container:link {
 }
 /* ========main part start============== */
 main{
-    margin: 100px 0;
-   display: grid;
-   grid-template-columns: repeat(4,250px);
+    margin:50px 0;
+
+   display: flex;
+   flex-wrap: wrap;
    justify-content: center;
-   row-gap: 20px;
-   column-gap: 20px;
+   gap: 20px;
+   padding: 0 50px;
 
 }
 .product{
@@ -316,4 +317,56 @@ main{
 .action_container{
     text-decoration: none;
     color: black;
+}
+
+
+
+@media (min-width:300px) and (max-width:575px){
+    .container{
+        padding: 0 10px;
+    }
+.nav_bar {
+    display: none;
+}
+.search_bar {
+    display: none;
+}
+.action_container {
+    font-size: 13px;
+}
+.logo_container {
+    margin-left:0;
+}
+.header {
+    align-items: start;
+    padding-top: 10px;
+}
+.action_bar {
+    display: flex;
+    min-width: 0;
+   gap: 20px;
+}
+main {
+    padding: 0 10px;
+}
+
+.footer_container {
+    padding: 30px 5px 40px 5px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
+}
+@media (min-width:460px) and (max-width:575px){
+    .product {
+    width: 185px;
+}
+}
+@media (min-width:500px) and (max-width:575px){
+    .product {
+    width: 205px;
+}
 }
