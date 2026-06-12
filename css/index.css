@@ -372,7 +372,7 @@ main {
 }
 
 /* ============small device responsive start==================== */
-@media (min-width:576px) and (max-width:768px) {
+@media (min-width:576px) and (max-width:767px) {
     .container{
         padding: 0 10px;
     }
@@ -412,3 +412,51 @@ main {
 }
 }
 /* sm device responsive done======================= */
+
+
+/* ======midium device responsive start=================== */
+@media (min-width:768px) and (max-width:991px){
+        .container{
+        padding: 0 10px;
+    }
+    .nav_bar a {
+    font-size: 12px;
+
+}
+.nav_bar {
+    gap: 10px;
+    align-items: center;
+}
+
+.search_bar {
+    display: none;
+}
+.action_container {
+    font-size: 13px;
+}
+.logo_container {
+    margin-left:0;
+}
+.header {
+    align-items: start;
+    padding-top: 10px;
+}
+.action_bar {
+    display: flex;
+    min-width: 0;
+   gap: 20px;
+}
+main {
+    padding: 0 10px;
+}
+
+.footer_container {
+    padding: 30px 5px 40px 5px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
+}
