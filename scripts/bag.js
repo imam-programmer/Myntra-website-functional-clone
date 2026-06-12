@@ -39,8 +39,8 @@ function displayBagItems(){
                 <div class="company">${e.company}</div>
                 <div class="item-name">${e.item_name}</div>
                 <div class="price-container">
-                  <span class="current-price">Rs ${e.current_price}</span>
-                  <span class="original-price">Rs ${e.original_price}</span>
+                  <span class="current-price">Tk ${e.current_price}</span>
+                  <span class="original-price">Tk ${e.original_price}</span>
                   <span class="discount-percentage">(${e.discount_percentage}% OFF)</span>
                 </div>
                 <div class="return-period">
@@ -80,20 +80,20 @@ function priceingshow(){
               <div class="price-header">PRICE DETAILS (${item} Items) </div>
               <div class="price-item">
                 <span class="price-item-tag">Total MRP</span>
-                <span class="price-item-value">Rs ${mrp}</span>
+                <span class="price-item-value">Tk ${mrp}</span>
               </div>
               <div class="price-item">
                 <span class="price-item-tag">Discount on MRP</span>
-                <span class="price-item-value priceDetail-base-discount">-Rs${discount_mrp}</span>
+                <span class="price-item-value priceDetail-base-discount">-Tk ${discount_mrp}</span>
               </div>
               <div class="price-item">
                 <span class="price-item-tag">Convenience Fee</span>
-                <span class="price-item-value">Rs 99</span>
+                <span class="price-item-value">Tk 99</span>
               </div>
               <hr>
               <div class="price-footer">
                 <span class="price-item-tag">Total Amount</span>
-                <span class="price-item-value">Rs ${finalpayment}</span>
+                <span class="price-item-value">Tk ${finalpayment}</span>
               </div>
             </div>
               <button class="btn-place-order">

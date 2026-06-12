@@ -19,7 +19,7 @@ function firstpage(){
                   <h6>${e.rating.stars} <span>★★★★★</span> | (${e.rating.count})</h6>
                   <h3>${e.company}</h3>
                   <h4>${e.item_name}</h4>
-                  <h2 >Rs ${e.current_price} <span class="original">Rs ${e.original_price}</span> <span class="offer">(${e.discount_percentage}% OFF)</span></h2>
+                  <h2 >Tk ${e.current_price} <span class="original">Tk ${e.original_price}</span> <span class="offer">(${e.discount_percentage}% OFF)</span></h2>
                   <button onclick="addCard(${e.id})">Add to Bag</button>
                 </div>`
     })
