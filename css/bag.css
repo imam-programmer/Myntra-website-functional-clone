@@ -137,3 +137,60 @@
 .original-price{
   text-decoration: line-through;
 }
+
+
+@media (min-width:300px) and (max-width:575px){
+  .bag-items-container {
+   
+    width: 100%;
+    padding-right: 0px;
+    padding-top:20px;
+  border: none;
+    font-size: 13px;
+
+}
+.bag-page {
+    width: 100%;
+    margin-left: 0;
+}
+section {
+    padding: 0 20px;
+}
+.bag-summary {
+    width: 100%;
+    padding: 24px 0 0 0px;
+  
+}
+.remove-from-cart {
+
+    font-size: 18px;
+    top: 0px;
+    right: 0;
+   
+}
+}
+/* =============small device responsive start=============== */
+@media (min-width:576px) and (max-width:768px){
+    .bag-items-container {
+   
+    width: 100%;
+    padding-right: 0px;
+    padding-top:20px;
+  border: none;
+    font-size: 13px;
+
+}
+.bag-page {
+    width: 100%;
+    margin-left: 0;
+}
+section {
+    padding: 0 20px;
+}
+.bag-summary {
+    width: 100%;
+    padding: 24px 0 0 0px;
+  
+}
+
+}
